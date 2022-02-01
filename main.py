@@ -145,6 +145,8 @@ AQI_Daily_TS = AQI_Daily_TS.drop(['month_year', 'count'], 1)
 AQI_Daily_TS = AQI_Daily_TS.resample('M', on='timestamp').mean()
 
 # -- Renaming the columns
+
+
 AQI_Daily_TS = AQI_Daily_TS.rename({'PM2-5':'PM2.5', 'Dew_Point_in_cel':'Dew_Point_in_°C', 'Temperature_in_cel':'Temperature_in_°C'}, axis=1)
 
 # Scaling the Data.
